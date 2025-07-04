@@ -20,10 +20,9 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold text-emerald-800 mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:underline">Home</a></li>
-            <li><a href="#" className="hover:underline">About Us</a></li>
-            <li><a href="#" className="hover:underline">Contact</a></li>
-            <li><a href="#" className="hover:underline">Team</a></li>
+            <li><a href="/" className="hover:underline">Home</a></li>
+            <li><a href="/products" className="hover:underline">Products</a></li>
+            <li><a href="/farms" className="hover:underline">Farms</a></li>
           </ul>
         </div>
 
@@ -41,13 +40,8 @@ const Footer = () => {
 
         {/* FAQs and Socials */}
         <div>
-          <h3 className="font-semibold text-emerald-800 mb-3">FAQs</h3>
-          <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:underline">How does delivery work?</a></li>
-            <li><a href="#" className="hover:underline">Are products certified organic?</a></li>
-            <li><a href="#" className="hover:underline">Can I return items?</a></li>
-          </ul>
-          <div className="flex space-x-4 mt-4">
+          
+          <div className="flex space-x-4 ">
             <a href="#" className="text-emerald-700 hover:text-emerald-900 transition-colors text-xl"><FaFacebookF /></a>
             <a href="#" className="text-emerald-700 hover:text-emerald-900 transition-colors text-xl"><FaTwitter /></a>
             <a href="#" className="text-emerald-700 hover:text-emerald-900 transition-colors text-xl"><FaInstagram /></a>

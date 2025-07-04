@@ -1,6 +1,13 @@
 import React from 'react';
+import { GiHamburgerMenu } from 'react-icons/gi';
+
 
 const Navbar = () => {
+  const links = [
+    {name:"Home", href:"/"},
+    {name:"Products", href:"/products"},
+    {name:"Farms", href:"/farms"},
+  ]
   const [menuOpen, setMenuOpen] = React.useState(false);
 
   return (
@@ -15,57 +22,69 @@ const Navbar = () => {
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Toggle menu"
       >
-        <span className={`block h-0.5 w-6 bg-emerald-700 transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-1.5" : ""}`}></span>
-        <span className={`block h-0.5 w-6 bg-emerald-700 my-1 transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}></span>
-        <span className={`block h-0.5 w-6 bg-emerald-700 transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-1.5" : ""}`}></span>
+        <GiHamburgerMenu/>
       </button>
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex gap-8 list-none m-0 p-0 items-center">
-        {["Home", "About Us", "Contact", "Team"].map((text, idx) => (
+        {links.map((link, idx) => (
           <li key={idx}>
             <a
-              href="#"
+              href= {link.href}
               className="relative text-gray-900 font-medium transition-all before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:h-[2px] before:w-0 before:bg-emerald-600 before:transition-all before:duration-300 hover:before:w-full"
             >
-              {text}
+              {link.name}
             </a>
           </li>
         ))}
       </ul>
 
       <div className="hidden md:flex gap-4">
-        <button className="px-5 py-2 border-2 rounded-full bg-[#0B7779] text-white font-semibold hover:bg-white hover:text-[#0B7779] border-[#0B7779] transition-colors">
+        <a
+          href="/login"
+          className="px-5 py-2 border-2 rounded-full bg-[#0B7779] text-white font-semibold hover:bg-white hover:text-[#0B7779] border-[#0B7779] transition-colors flex items-center justify-center"
+        >
           Login
-        </button>
-        <button className="px-5 py-2 rounded-full border-2 border-[#DA6801] bg-[#DA6801] text-white font-semibold hover:text-[#DA6801] hover:bg-white transition-colors">
+        </a>
+        <a
+          href="/signup"
+          className="px-5 py-2 rounded-full border-2 border-[#DA6801] bg-[#DA6801] text-white font-semibold hover:text-[#DA6801] hover:bg-white transition-colors flex items-center justify-center"
+        >
           Sign Up
-        </button>
+        </a>
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="absolute top-full left-0 w-full bg-white/90 shadow-md flex flex-col items-center md:hidden z-40">
           <ul className="flex flex-col gap-4 py-4 w-full items-center">
-            {["Home", "About Us", "Contact", "Team"].map((text, idx) => (
+            {links.map((link, idx) => (
               <li key={idx}>
                 <a
-                  href="#"
+                  href={link.href}
                   onClick={() => setMenuOpen(false)}
                   className="relative text-gray-900 font-medium transition-all before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:h-[2px] before:w-0 before:bg-emerald-600 before:transition-all before:duration-300 hover:before:w-full"
                 >
-                  {text}
+                  {link.name}
                 </a>
               </li>
             ))}
           </ul>
           <div className="flex flex-col gap-2 pb-4 w-full items-center">
-            <button className="w-4/5 px-5 py-2 border-2 rounded-full bg-[#0B7779] text-white font-semibold hover:bg-white hover:text-[#0B7779] border-[#0B7779] transition-colors">
+            <a
+              href="/login"
+              onClick={() => setMenuOpen(false)}
+              className="w-4/5 px-5 py-2 border-2 rounded-full bg-[#0B7779] text-white font-semibold hover:bg-white hover:text-[#0B7779] border-[#0B7779] transition-colors flex items-center justify-center"
+            >
               Login
-            </button>
-            <button className="w-4/5 px-5 py-2 rounded-full border-2 border-[#DA6801] bg-[#DA6801] text-white font-semibold hover:bg-white hover:text-[#DA6801] transition-colors">
+            </a>
+            <a
+              href="/signup"
+              onClick={() => setMenuOpen(false)}
+              className="w-4/5 px-5 py-2 rounded-full border-2 border-[#DA6801] bg-[#DA6801] text-white font-semibold hover:bg-white hover:text-[#DA6801] transition-colors flex items-center justify-center"
+            >
               Sign Up
-            </button>
+            </a>
           </div>
         </div>
       )}
