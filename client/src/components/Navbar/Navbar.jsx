@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white drop-shadow-xl px-4 py-3 md:px-10 lg:px-20 flex items-center justify-between sticky top-0 z-50">
-      <div className="font-bold text-emerald-700 text-2xl tracking-wide">
+      <div className="font-black text-emerald-700 text-2xl tracking-wide">
         FarmNest<span className="text-black">.</span>
       </div>
 
@@ -31,7 +31,7 @@ const Navbar = () => {
           <li key={idx}>
             <a
               href= {link.href}
-              className="relative text-gray-900 font-medium transition-all before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:h-[2px] before:w-0 before:bg-emerald-600 before:transition-all before:duration-300 hover:before:w-full"
+              className="relative text-gray-900 font-bold transition-all before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:h-[2px] before:w-0 before:bg-emerald-600 before:transition-all before:duration-300 hover:before:w-full"
             >
               {link.name}
             </a>

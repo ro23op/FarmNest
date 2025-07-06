@@ -18,7 +18,7 @@ const Footer = () => {
 
         {/* Navigation Links */}
         <div>
-          <h3 className="font-semibold text-emerald-800 mb-3">Quick Links</h3>
+          <h3 className="font-semibold text-amber-800 mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm">
             <li><a href="/" className="hover:underline">Home</a></li>
             <li><a href="/products" className="hover:underline">Products</a></li>
@@ -28,7 +28,7 @@ const Footer = () => {
 
         {/* Categories */}
         <div>
-          <h3 className="font-semibold text-emerald-800 mb-3">Categories</h3>
+          <h3 className="font-semibold text-amber-800 mb-3">Categories</h3>
           <ul className="space-y-2 text-sm">
             <li><a href="#" className="hover:underline">Dairy Products</a></li>
             <li><a href="#" className="hover:underline">Vegetables</a></li>

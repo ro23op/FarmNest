@@ -5,12 +5,11 @@ import HomePic from './HomePic';
 
 const Home = () => {
   return (
-    <div className="relative z-10 -mt-10 min-h-screen px-4 py-10">
+    <div className="relative z-10 -mt-10 min-h-screen">
       <HomeBG />
       <div className="flex flex-col lg:flex-row justify-between">
         <HomeText />
         <HomePic />
-        
       </div>
     </div>
   );

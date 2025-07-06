@@ -6,7 +6,7 @@ import {motion} from "motion/react";
 
 const HomeBG = () => {
   return (
-  <div className="backdrop-blur-lg absolute top-0 left-0 w-full h-full bg-[#bafac129] -z-10 pointer-events-none">
+  <div className="backdrop-blur-lg absolute top-0 left-0 w-full h-full bg-[#bafac129] -z-10 pointer-events-none overflow-hidden">
       <div className="absolute -bottom-[2%] -left-[5%] w-96 h-96 bg-[#1DD3B0] rounded-full blur-3xl opacity-30 -z-20" />
 
       <motion.div
