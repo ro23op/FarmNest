@@ -5,7 +5,7 @@ const HomePic = () => {
     <div className="hidden lg:block relative w-full lg:w-1/2 lg:h-screen overflow-hidden">
 
       <div
-        className="absolute inset-0 bg-cover bg-center scale-105 transition-transform duration-500 hover:scale-110"
+        className="absolute inset-0 bg-cover bg-center transition-transform duration-500 hover:scale-105"
         style={{
           backgroundImage:
             "url('https://img.freepik.com/premium-photo/greengrocer-selling-organic-fresh-agricultural-product-farmer-market_53876-58800.jpg')",

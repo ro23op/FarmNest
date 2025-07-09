@@ -24,19 +24,19 @@ const FeaturedFarms = () => {
         }
     ];
   return (
-    <div className="w-full px-5 xl:px-20 mt-5">
+    <div className="w-full px-5 xl:px-20 mt-5 mb-10">
         <h2 className='text-3xl font-bold '><span className='bg-yellow-500 h-[22px] w-[5px] inline-block mr-2'></span>Featured Farms</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-5">
             {farms.map(farm => (
-                <div key={farm.id} className="m-2 h-[380px] bg-orange-50 rounded-2xl shadow-xl overflow-hidden ">
+                <div key={farm.id} className="m-2 h-[380px] bg-[#0B7779]/90 rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all ease-in-out">
                     <div className="w-full h-[60%]  hover:bg-gray-600 overflow-hidden">
-                        <img src={farm.image} alt={farm.name} className="w-full h-full object-cover mb-4 hover:scale-105 transition-all ease-in-out" />
+                        <img src={farm.image} alt={farm.name} className="w-full h-full object-cover mb-4 " />
                     </div>
                     <div className="p-4">
-                        <h3 className="text-xl font-semibold">{farm.name}</h3>
-                        <p className="text-sm text-gray-500 mb-2">{farm.description}</p>
-                        <p className="text-lg text-gray-700">{farm.produce}</p>
+                        <h3 className="text-xl text-white font-semibold">{farm.name}</h3>
+                        <p className="text-sm text-gray-200 mb-2">{farm.description}</p>
+                        <p className="text-lg text-white">{farm.produce}</p>
                     </div>
                 </div>
             ))}

@@ -36,14 +36,14 @@ const FeaturedProduct = () => {
         <h2 className='text-3xl font-bold'><span className='h-[22px] w-[5px] mr-2 bg-amber-700 inline-block'></span>Featured Products</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 p-5">
             {products.map(product => (
-                <div key={product.id} className="m-2 h-[380px] bg-amber-50 rounded-2xl shadow-xl overflow-hidden">
+                <div key={product.id} className="m-2 h-[380px] bg-[#DA6801]/80 rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all ease-in-out">
                     <div className="w-full h-[60%] overflow-hidden">
-                        <img src={product.image} alt={product.name} className="w-full h-full object-cover mb-4 hover:scale-105 transition-all ease-in-out" />
+                        <img src={product.image} alt={product.name} className="w-full h-full object-cover mb-4 " />
                     </div>
                     <div className="p-4">
-                        <h3 className="text-xl font-semibold">{product.name}</h3>
-                        <p className="text-sm text-gray-500 mb-2">{product.farm}</p>
-                        <p className="text-lg text-gray-700">Rs. {product.price}/Kg</p>
+                        <h3 className="text-xl text-white font-semibold">{product.name}</h3>
+                        <p className="text-sm text-gray-200 mb-2">{product.farm}</p>
+                        <p className="text-lg text-gray-100">Rs. {product.price}/Kg</p>
                     </div>
                 </div>
             ))}
