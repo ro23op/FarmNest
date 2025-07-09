@@ -25,6 +25,7 @@ const Signup = () => {
 
       // Redirect or show success
       window.location.href = "/"; // or cart, homepage, etc.
+
     } catch (err) {
       console.error(err);
       setError("Signup failed. Try again.");

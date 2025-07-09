@@ -42,6 +42,7 @@ const Login = () => {
       });
 
       window.location.href = '/';
+
     } catch (err) {
       console.error(err);
       setError('Google login failed.');
