@@ -22,6 +22,7 @@ const productSchema = new mongoose.Schema({
     farm: {
         type: mongoose.Schema.Types.ObjectId, 
         ref: 'Farm',
+        required:true,
     },
     quantityAvailable: { 
         type: Number,
