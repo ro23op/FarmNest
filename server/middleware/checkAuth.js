@@ -1,4 +1,4 @@
-import admin from '../admin';
+import admin from '../admin.js';
 
 const checkAuth = async (req, res, next) => {
   const sessionCookie = req.cookies.session || '';

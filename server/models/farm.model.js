@@ -31,7 +31,7 @@ const farmSchema = new mongoose.Schema({
         ref: 'Product'
     }],
     reviews: [{
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Review'
     }],
     createdAt: { 

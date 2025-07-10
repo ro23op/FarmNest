@@ -1,4 +1,4 @@
-import { Farm } from '../models/farm.model.js';
+import Farm from '../models/farm.model.js';
 
 export const registerFarm = async (req, res) => {
   try {

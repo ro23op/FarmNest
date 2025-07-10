@@ -7,7 +7,7 @@ import {
   updateProduct,
   deleteProduct
 } from '../controllers/product.controller.js';
-import { checkAuth } from '../middleware/checkAuth.js'; // optional
+import checkAuth from '../middleware/checkAuth.js'; // optional
 
 const router = express.Router();
 
