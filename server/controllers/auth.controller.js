@@ -1,5 +1,5 @@
-import admin from "../admin";
-import User from "../models/user.model";
+import admin from "../admin.js";
+import User from "../models/user.model.js";
 
 export const login = async (req, res) => {
   const { idToken } = req.body;

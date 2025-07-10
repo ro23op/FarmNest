@@ -1,5 +1,5 @@
 // server/controllers/product.controller.js
-import { Product } from '../models/product.model.js';
+import Product from '../models/product.model.js';
 
 // Create product
 export const createProduct = async (req, res) => {

@@ -1,6 +1,6 @@
 import express from 'express';
-import checkAuth from '../middleware/checkAuth';
-import { registerFarm } from '../controllers/farm.controller';
+import checkAuth from '../middleware/checkAuth.js';
+import { registerFarm } from '../controllers/farm.controller.js';
 
 const router = express.Router();
 
