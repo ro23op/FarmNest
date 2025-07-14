@@ -2,7 +2,7 @@ import React from 'react';
 
 const HomePic = () => {
   return (
-    <div className="hidden lg:block relative w-full lg:w-1/2 lg:h-screen overflow-hidden">
+    <div className="hidden lg:block relative lg:w-1/2 lg:h-screen overflow-hidden">
 
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-500 hover:scale-105"

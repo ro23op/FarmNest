@@ -36,7 +36,7 @@ const HomeBG = () => {
       animate={{ rotate: 20, scale: 1.1,x: -30,y:-50
       }}
         transition={{ duration: 10, repeat: Infinity, repeatType: 'reverse' }}
-      className="absolute top-[40%] rotate-180  left-[5%] blur-[2px] text-[green] text-7xl opacity-85">
+      className="absolute top-[40%] rotate-180  left-[2%] blur-[2px] text-[green] text-7xl opacity-85">
         <GiLeafSkeleton />
       </motion.div>
 

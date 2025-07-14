@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import { GiHamburgerMenu, GiCancel  } from 'react-icons/gi';
 import { auth } from '../../firebase'; // make sure this path is correct
 import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { HiOutlineShoppingCart } from "react-icons/hi";
 
 const Navbar = () => {
   const links = [
@@ -12,6 +13,7 @@ const Navbar = () => {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [user, setUser] = useState(null);
+  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -34,13 +36,7 @@ const Navbar = () => {
       </div>
 
       {/* Hamburger Icon */}
-      <button
-        className="md:hidden hover:cursor-pointer flex flex-col justify-center items-center w-10 h-10"
-        onClick={() => setMenuOpen(!menuOpen)}
-        aria-label="Toggle menu"
-      >
-        <GiHamburgerMenu />
-      </button>
+      
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex gap-8 list-none m-0 p-0 items-center">
@@ -55,6 +51,12 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+      <div className="flex">
+      {user && (
+        <button className='mr-4 ' onClick={setModalOpen}>
+          <HiOutlineShoppingCart className='text-3xl text-green-700'/>
+        </button>
+      )}
 
       <div className="hidden md:flex gap-4">
         {!user ? (
@@ -88,6 +90,21 @@ const Navbar = () => {
             </button>
           </>
         )}
+      </div>
+      
+
+      <button
+        className="md:hidden hover:cursor-pointer flex flex-col justify-center items-center w-10 h-10"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle menu"
+      >
+        {menuOpen?(
+          <GiCancel className='text-green-700 text-2xl'/>
+        ):(
+          <GiHamburgerMenu  className='text-green-700 text-2xl'/>
+        )}
+        
+      </button>
       </div>
 
       {/* Mobile Menu */}
@@ -145,6 +162,12 @@ const Navbar = () => {
               </>
             )}
           </div>
+        </div>
+      )}
+
+      {modalOpen && (
+        <div className="absolute ">
+
         </div>
       )}
     </nav>

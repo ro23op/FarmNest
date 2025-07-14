@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="relative z-10 -mt-10 min-h-screen">
       <HomeBG />
-      <div className="flex flex-col lg:flex-row justify-between">
+      <div className="flex flex-col pt-20 lg:py-0 lg:flex-row justify-between">
         <HomeText />
         <HomePic />
       </div>

@@ -62,7 +62,7 @@ const FeaturedProduct = () => {
       <section className="w-full px-5 xl:px-20 py-16 bg-gradient-to-br from-orange-50 to-amber-50">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            <span className="bg-gradient-to-r from-amber-500 to-orange-600 h-[4px] w-[6px] inline-block mr-3 rounded-full"></span>
+            <span className="bg-orange-600 h-[26px] w-[6px] inline-block mr-2"></span>
             Featured Products
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">

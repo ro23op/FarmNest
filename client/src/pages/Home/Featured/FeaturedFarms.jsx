@@ -44,7 +44,7 @@ const FeaturedFarms = () => {
       <section className="w-full px-5 xl:px-20 py-16 bg-gradient-to-br from-emerald-50 to-green-50">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 h-[4px] w-[6px] inline-block mr-3 rounded-full"></span>
+            <span className="bg-yellow-500 h-[26px] w-[6px] inline-block mr-2"></span>
             Featured Farms
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -128,7 +128,7 @@ const FeaturedFarms = () => {
         {/* Call to Action */}
         <div className="text-center mt-12">
           <button className="bg-gradient-to-r from-emerald-500 to-green-600 text-white px-8 py-4 rounded-xl hover:from-emerald-600 hover:to-green-700 transition-all duration-300 font-semibold shadow-lg transform hover:scale-105">
-            Explore All Partner Farms
+            <a href="/farms">Explore All Partner Farms</a>
           </button>
         </div>
       </section>

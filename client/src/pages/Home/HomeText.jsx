@@ -2,7 +2,7 @@ import React from 'react'
 
 const HomeText = () => {
   return (
-    <div className='py-40 flex flex-col items-center justify-center lg:items-start lg:py-20 lg:pl-40 '>
+    <div className='py-40 flex flex-col items-center justify-center lg:items-start lg:py-20 lg:pl-10 xl:pl-30 '>
         <h1 className='text-3xl md:text-4xl font-mono font-medium leading-10'>Bringing the <span className='text-[#0B7779] '>Farm</span><br />to Your Doorstep</h1>
         <h2 className='text-4xl sm:text-5xl mt-3 font-sans font-bold text-black'>
             <span className='text-[#F4943E]'>Fresh</span>. 
